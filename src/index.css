@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset scroll target so sticky header doesn’t cover section headings */
+#hero,
+#problem,
+#see-lawbric,
+#features,
+#deploy,
+#faq,
+#demo {
+  scroll-margin-top: 5.5rem;
+}
+
+body {
+  @apply antialiased text-gray-text font-sans;
+}
+
+/* Smooth scroll reveal (can be triggered via Intersection Observer or class) */
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
