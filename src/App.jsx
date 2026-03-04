@@ -361,8 +361,8 @@ function DeploySteps() {
   return (
     <section id="deploy" ref={ref} className={`bg-gray-bg px-4 pt-24 pb-16 sm:px-6 sm:pt-28 sm:pb-24 lg:px-8 lg:pt-32 lg:pb-24 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
-          {/* First column: heading, subheading, body text */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
+          {/* First column: heading, body text — vertically centered with column two */}
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-gray-dark sm:text-3xl lg:text-4xl">
               From Setup to Fully Automated Client Engagement — Fast, Easy, Turnkey
@@ -373,14 +373,6 @@ function DeploySteps() {
             <p className="mt-4 text-gray-text leading-relaxed">
               Everything is unified and turnkey, so your firm can focus on practicing law while Lawbric works in the background to engage clients, qualify leads, and schedule appointments 24/7.
             </p>
-            <a
-              href="https://api.leadconnectorhq.com/widget/form/isLG6uqGeavaCa0Lpqb3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block rounded-lg bg-lawbric-blue px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-lawbric-blue-dark"
-            >
-              Learn More
-            </a>
           </div>
           {/* Second column: 3 steps — badge at top of each row, full-height line behind */}
           <div className="space-y-0">
