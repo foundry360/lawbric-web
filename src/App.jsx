@@ -93,12 +93,7 @@ function Header({ onOpenDemoModal }) {
           <a href="#deploy" className="hidden text-gray-300 hover:text-white sm:inline">
             How It Works
           </a>
-          <a
-            href="/aos-guide"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden text-gray-300 hover:text-white sm:inline"
-          >
+          <a href="/aos-guide" className="hidden text-gray-300 hover:text-white sm:inline">
             AOS Guide
           </a>
           <a href="#faq" className="hidden text-gray-300 hover:text-white sm:inline">
