@@ -1,4 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import AOSGuide from './pages/AOSGuide'
 
 function useFadeIn() {
   const ref = useRef(null)
@@ -16,7 +18,7 @@ function useFadeIn() {
   return { ref, visible }
 }
 
-const BOOKING_URL = 'https://api.leadconnectorhq.com/widget/booking/5igAcLbQXggi0w2WUWcc'
+const BOOKING_URL = 'https://api.leadconnectorhq.com/widget/booking/FynhieZT7cejx0SvVPe2'
 
 function DemoModal({ open, onClose }) {
   useEffect(() => {
@@ -90,6 +92,14 @@ function Header({ onOpenDemoModal }) {
           </a>
           <a href="#deploy" className="hidden text-gray-300 hover:text-white sm:inline">
             How It Works
+          </a>
+          <a
+            href="/aos-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden text-gray-300 hover:text-white sm:inline"
+          >
+            AOS Guide
           </a>
           <a href="#faq" className="hidden text-gray-300 hover:text-white sm:inline">
             FAQ
@@ -681,11 +691,10 @@ function Footer({ onOpenDemoModal }) {
   )
 }
 
-export default function App() {
+function HomePage() {
   const [demoModalOpen, setDemoModalOpen] = useState(false)
   const openDemoModal = () => setDemoModalOpen(true)
   const closeDemoModal = () => setDemoModalOpen(false)
-
   return (
     <>
       <Header onOpenDemoModal={openDemoModal} />
@@ -701,5 +710,14 @@ export default function App() {
       <Footer onOpenDemoModal={openDemoModal} />
       <DemoModal open={demoModalOpen} onClose={closeDemoModal} />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/aos-guide" element={<AOSGuide />} />
+    </Routes>
   )
 }
